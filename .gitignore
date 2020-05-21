@@ -1,0 +1,10 @@
+.Rproj.user
+*.Rhistory
+.RData
+
+_/
+dev/
+*-dev/
+dev.*
+*-dev.*
+*_dev.*

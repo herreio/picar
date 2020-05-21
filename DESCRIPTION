@@ -1,0 +1,12 @@
+Package: picar
+Title: Import Pica data via Catmandu and analyze it in R
+Version: 0.1
+Authors@R: "Donatus Herre <mail@herre.io> [aut, cre]"
+Description: What the package does (one paragraph)
+Depends: R (>= 4.0.0)
+License: file LICENSE
+LazyData: true
+Encoding: UTF-8
+Imports:
+    jsonlite
+RoxygenNote: 7.0.2
