@@ -14,6 +14,21 @@ import_sru(
   pretty = T
 )
 }
+\arguments{
+\item{base}{Url of SRU endpoint}
+
+\item{query}{Query to be requested}
+
+\item{recordSchema}{Record schema to be requested}
+
+\item{parser}{Parser for record schema (optional)}
+
+\item{total}{Total number of records to be requested}
+
+\item{target}{Directory path for resulting json file}
+
+\item{pretty}{Whether json data should be pretty printed}
+}
 \description{
 Import pica data via catmandu with given parameters
 }

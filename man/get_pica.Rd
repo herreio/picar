@@ -6,6 +6,9 @@
 \usage{
 get_pica(fp)
 }
+\arguments{
+\item{fp}{Path to json file with parsed pica data.}
+}
 \description{
 Get pica items imported via catmandu and parsed as picaxml
 }

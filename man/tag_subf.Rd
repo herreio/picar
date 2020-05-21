@@ -6,6 +6,13 @@
 \usage{
 tag_subf(item, id, subf)
 }
+\arguments{
+\item{item}{Item data parsed from picaxml}
+
+\item{id}{Identifier of tag to be extracted}
+
+\item{subf}{Subfield identifier of tag to be extracted}
+}
 \description{
 Extract content of subf of tag indicated by id from given item
 }

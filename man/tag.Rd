@@ -6,6 +6,11 @@
 \usage{
 tag(item, id)
 }
+\arguments{
+\item{item}{Item data parsed from picaxml}
+
+\item{id}{Identifier of tag to be extracted}
+}
 \description{
 Extract tag indicated by id from given item
 }
