@@ -1,5 +1,7 @@
 #' Extract tag indicated by id from given item
 #'
+#' @param item Item data parsed from picaxml
+#' @param id Identifier of tag to be extracted
 #' @export
 tag <- function(item, id) {
     item[[id]]
@@ -7,6 +9,9 @@ tag <- function(item, id) {
 
 #' Extract content of subf of tag indicated by id from given item
 #'
+#' @param item Item data parsed from picaxml
+#' @param id Identifier of tag to be extracted
+#' @param subf Subfield identifier of tag to be extracted
 #' @export
 tag_subf <- function(item, id, subf) {
     index <- which(tag(item, id) == subf)

@@ -1,5 +1,8 @@
 #' Get pica items imported via catmandu and parsed as picaxml
 #'
+#' @param fp Path to json file with parsed pica data.
+#' @importFrom jsonlite read_json
+#' @importFrom stats setNames
 #' @export
 get_pica <- function(fp) {
     # # read json file from given path
@@ -10,5 +13,5 @@ get_pica <- function(fp) {
                  sapply(x$record, function(z) {z[[1]]}))
     })
     # set PPNs as names
-    setNames(records, sapply(result, function(x) x[["_id"]]))
+    stats::setNames(records, sapply(result, function(x) x[["_id"]]))
 }
