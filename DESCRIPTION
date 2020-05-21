@@ -1,12 +1,17 @@
 Package: picar
-Title: Import Pica data via Catmandu and analyze it in R
+Title: Pica Data Import (via Catmandu) and Analysis
 Version: 0.1
 Authors@R: "Donatus Herre <mail@herre.io> [aut, cre]"
-Description: What the package does (one paragraph)
-Depends: R (>= 4.0.0)
+Description: Import Pica data via Catmandu command line interface from different
+    SRU interfaces and store content parsed as picaxml to local json files.
+    Read these files via jsonlite to extract specific pica tags of items and perform
+    further bibliographic analysis based on that. Focus lies on german library
+    cataloging formats from GBV union and the German National Library.
 License: file LICENSE
-LazyData: true
+Depends: R (>= 4.0.0)
 Encoding: UTF-8
+LazyData: true
 Imports:
     jsonlite
+SystemRequirements: Perl, Catmandu::SRU, Catmandu::PICA
 RoxygenNote: 7.0.2
