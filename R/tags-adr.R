@@ -12,7 +12,7 @@ adr_printer <- function(item) {
 #'
 #' @param item Item data parsed from picaxml
 #' @export
-printer_gnd <- function(item) {
+adr_printer_gnd <- function(item) {
   # Normierter Verleger / Drucker (Alte Drucke)
   tag_subf(item, "033J", "0")
 }
