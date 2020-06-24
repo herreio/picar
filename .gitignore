@@ -12,3 +12,7 @@ dev.*
 packrat/lib*/
 packrat/src/*
 !packrat/src/packrat
+
+doc
+inst/doc
+Meta
