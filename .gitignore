@@ -8,3 +8,7 @@ dev/
 dev.*
 *-dev.*
 *_dev.*
+
+packrat/lib*/
+packrat/src/*
+!packrat/src/packrat
