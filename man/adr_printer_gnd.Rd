@@ -2,7 +2,7 @@
 % Please edit documentation in R/tags-adr.R
 \name{adr_printer_gnd}
 \alias{adr_printer_gnd}
-\title{Normierter Verleger / Drucker (Alte Drucke)}
+\title{Normierter Verleger / Drucker GND (Alte Drucke)}
 \usage{
 adr_printer_gnd(item)
 }
@@ -10,5 +10,5 @@ adr_printer_gnd(item)
 \item{item}{Item data parsed from picaxml}
 }
 \description{
-Normierter Verleger / Drucker (Alte Drucke)
+Normierter Verleger / Drucker GND (Alte Drucke)
 }
