@@ -8,7 +8,7 @@ Description: Import Pica data via Catmandu command line interface from different
     further bibliographic analysis based on that. Focus lies on german library
     cataloging formats from GBV union and the German National Library.
 License: file LICENSE
-Depends: R (>= 4.0.0)
+Depends: R (>= 3.5.0)
 Encoding: UTF-8
 LazyData: true
 Imports:
