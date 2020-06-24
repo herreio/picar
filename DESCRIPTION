@@ -14,4 +14,4 @@ LazyData: true
 Imports:
     jsonlite
 SystemRequirements: Perl, Catmandu::SRU, Catmandu::PICA
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.0
