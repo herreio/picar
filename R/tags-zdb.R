@@ -112,7 +112,7 @@ zdb_pubhistory <- function(item) {
 zdb_pubhistory_strict <- function(item) {
     # 
     year <- function(x) {
-        # lösche Zeichen vor und nach vier aufeinanderfolgende Zahlen (YYYY)
+        # lösche Zeichen vor und nach vier aufeinanderfolgenden Zahlen (YYYY)
         gsub( ".*(\\d{4}).*", "\\1", x)
     }
     # zwei Eintraege in Unterfeldern: Erst- und Letzerscheinungsjahr
