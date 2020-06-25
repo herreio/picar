@@ -110,7 +110,6 @@ zdb_pubhistory <- function(item) {
 #' @param item Item data parsed from PicaPlus-XML
 #' @export
 zdb_pubhistory_strict <- function(item) {
-    # 
     year <- function(x) {
         # lösche Zeichen vor und nach vier aufeinanderfolgenden Zahlen (YYYY)
         gsub( ".*(\\d{4}).*", "\\1", x)
