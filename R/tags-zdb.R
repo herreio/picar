@@ -10,7 +10,13 @@ zdb_schema <- function() {
 #' @param item Item data parsed from picaxml
 #' @export
 zdb_place <- function(item) {
-    tag_subf__pp(item, "033A", "p")
+    if(!is.null(tag_subf__pp(item, "033A", "p"))) {
+        tag_subf__pp(item, "033A", "p")
+    } else {
+        if(identical(item[["033A"]]$subf$id, "p")) {
+            tag__pp(item, "033A")
+        }
+    }
 }
 
 #' Verlagsorte, Verlag, Verleger
