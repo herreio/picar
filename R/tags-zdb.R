@@ -51,6 +51,22 @@ zdb_bibtype <- function(item) {
   tag__pp(item, "002@")
 }
 
+#' Angaben zum Inhalt
+#'
+#' @param item Item data parsed from PicaPlus-XML
+#' @export
+zdb_contenttype <- function(item) {
+  tag_subf__pp(item, "013D", "a")
+}
+
+#' Angaben zum Inhalt (GND-Nummer)
+#'
+#' @param item Item data parsed from PicaPlus-XML
+#' @export
+zdb_contenttype_gnd <- function(item) {
+  tag_subf__pp(item, "013D", "0")
+}
+
 #' ZDB-Nummer
 #'
 #' @param item Item data parsed from PicaPlus-XML
