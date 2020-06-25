@@ -142,6 +142,30 @@ zdb_pubhistory_strict <- function(item) {
     return(NULL)
 }
 
+#' Körperschaft, Konferenz - 1. geistiger Schöpfer (Name)
+#'
+#' @param item Item data parsed from PicaPlus-XML
+#' @export
+zdb_organ_name <- function(item) {
+  tag_subf__pp(item, "029A", "a")
+}
+
+#' Körperschaft, Konferenz - 1. geistiger Schöpfer (Rolle)
+#'
+#' @param item Item data parsed from PicaPlus-XML
+#' @export
+zdb_organ_role <- function(item) {
+    tag_subf__pp(item, "029A", "B")
+}
+
+#' Körperschaft, Konferenz - 1. geistiger Schöpfer (GND)
+#'
+#' @param item Item data parsed from PicaPlus-XML
+#' @export
+zdb_organ_gnd <- function(item) {
+    tag_subf__pp(item, "029A", "0")
+}
+
 #' Person - Bevorzugter Name
 #'
 #' @param item Item data parsed from PicaPlus-XML
