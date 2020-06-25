@@ -142,6 +142,39 @@ zdb_pubhistory_strict <- function(item) {
     return(NULL)
 }
 
+#' Person - Bevorzugter Name
+#'
+#' @param item Item data parsed from PicaPlus-XML
+#' @export
+zdb_person_name <- function(item) {
+  if (!is.null(tag_subf__pp(item, "028A", "d")) & !is.null(tag_subf__pp(item, "028A", "a"))) {
+      return(paste(tag_subf__pp(item, "028A", "d"), tag_subf__pp(item, "028A", "a")))
+  }
+  if (is.null(tag_subf__pp(item, "028A", "d")) & !is.null(tag_subf__pp(item, "028A", "a"))) {
+      return(tag_subf__pp(item, "028A", "a"))
+  }
+  if (!is.null(tag_subf__pp(item, "028A", "P"))) {
+      return(tag_subf__pp(item, "028A", "P"))
+  }
+  return(NULL)
+}
+
+#' Person - Bevorzugter Name (Rolle)
+#'
+#' @param item Item data parsed from PicaPlus-XML
+#' @export
+zdb_person_role <- function(item) {
+    tag_subf__pp(item, "028A", "B")
+}
+
+#' Person - Bevorzugter Name (Rolle)
+#'
+#' @param item Item data parsed from PicaPlus-XML
+#' @export
+zdb_person_gnd <- function(item) {
+    tag_subf__pp(item, "028A", "9")
+}
+
 #' Person, Familie – Sonstige und Mitwirkende (Name)
 #'
 #' @param item Item data parsed from PicaPlus-XML
