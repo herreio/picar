@@ -143,6 +143,30 @@ zdb_pubhistory_strict <- function(item) {
     return(NULL)
 }
 
+#' Person, Familie – Sonstige und Mitwirkende (Name)
+#'
+#' @param item Item data parsed from PicaPlus-XML
+#' @export
+zdb_contributor_name <- function(item) {
+    trimws(paste(tag_subf__pp(item, "028C", "d"), tag_subf__pp(item, "028C", "a")))
+}
+
+#' Person, Familie – Sonstige und Mitwirkende (Rolle)
+#'
+#' @param item Item data parsed from PicaPlus-XML
+#' @export
+zdb_contributor_role <- function(item) {
+    tag_subf__pp(item, "028C", "B")
+}
+
+#' Person, Familie – Sonstige und Mitwirkende (GND)
+#'
+#' @param item Item data parsed from PicaPlus-XML
+#' @export
+zdb_contributor_gnd <- function(item) {
+    tag_subf__pp(item, "028C", "9")
+}
+
 #' Einträge mit angegebener bibliographischer Gattung (bg)
 #'
 #' @param item Item data parsed from PicaPlus-XML
