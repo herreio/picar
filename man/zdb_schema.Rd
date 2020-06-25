@@ -2,10 +2,10 @@
 % Please edit documentation in R/tags-zdb.R
 \name{zdb_schema}
 \alias{zdb_schema}
-\title{get pica-based ZDB title schema}
+\title{PICA-basiertes Titelschema der ZDB im JSON-Format}
 \usage{
 zdb_schema()
 }
 \description{
-get pica-based ZDB title schema
+PICA-basiertes Titelschema der ZDB im JSON-Format
 }

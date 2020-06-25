@@ -1,6 +1,6 @@
 #' Extract tag indicated by id from given item
 #'
-#' @param item Item data parsed from picaxml
+#' @param item Item data parsed as picaxml
 #' @param id Identifier of tag to be extracted
 #' @export
 tag <- function(item, id) {
@@ -9,7 +9,7 @@ tag <- function(item, id) {
 
 #' Extract content of subf of tag indicated by id from given item
 #'
-#' @param item Item data parsed from picaxml
+#' @param item Item data parsed as picaxml
 #' @param id Identifier of tag to be extracted
 #' @param subf Subfield identifier of tag to be extracted
 #' @export

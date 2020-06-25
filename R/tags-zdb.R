@@ -1,4 +1,4 @@
-#' get pica-based ZDB title schema
+#' PICA-basiertes Titelschema der ZDB im JSON-Format
 #'
 #' @export
 zdb_schema <- function() {
@@ -7,7 +7,7 @@ zdb_schema <- function() {
 
 #' Verlagsorte, Verlag, Verleger
 #'
-#' @param item Item data parsed from picaxml
+#' @param item Item data parsed from PicaPlus-XML
 #' @export
 zdb_place <- function(item) {
     if(!is.null(tag_subf__pp(item, "033A", "p"))) {
@@ -21,23 +21,31 @@ zdb_place <- function(item) {
 
 #' Verlagsorte, Verlag, Verleger
 #'
-#' @param item Item data parsed from picaxml
+#' @param item Item data parsed from PicaPlus-XML
 #' @export
 zdb_publisher <- function(item) {
     tag_subf__pp(item, "033A", "n")
 }
 
-#' Verlagsorte, Verlag, Verleger
+#' Frühere Verlagsorte und Verleger
 #'
-#' @param item Item data parsed from picaxml
+#' @param item Item data parsed from PicaPlus-XML
 #' @export
-zdb_publisher_place <- function(item) {
-    c(zdb_publisher(item), zdb_place(item))
+zdb_publisher_prev <- function(item) {
+    tag_subf__pp(item, "033B", "n")
+}
+
+#' Frühere Verlagsorte und Verleger
+#'
+#' @param item Item data parsed from PicaPlus-XML
+#' @export
+zdb_place_prev <- function(item) {
+    tag_subf__pp(item, "033B", "p")
 }
 
 #' Bibliographische Gattung
 #'
-#' @param item Item data parsed from picaxml
+#' @param item Item data parsed from PicaPlus-XML
 #' @export
 zdb_bibtype <- function(item) {
   tag__pp(item, "002@")
@@ -45,7 +53,7 @@ zdb_bibtype <- function(item) {
 
 #' ZDB-Nummer
 #'
-#' @param item Item data parsed from picaxml
+#' @param item Item data parsed from PicaPlus-XML
 #' @export
 zdb_number <- function(item) {
     tag__pp(item, "006Z")
@@ -53,7 +61,7 @@ zdb_number <- function(item) {
 
 #' Identifikationsnummer des Datensatzes (IDN)
 #'
-#' @param item Item data parsed from picaxml
+#' @param item Item data parsed from PicaPlus-XML
 #' @export
 zdb_idn <- function(item) {
     tag__pp(item, "003@")
@@ -61,7 +69,7 @@ zdb_idn <- function(item) {
 
 #' Hauptsachtitel
 #'
-#' @param item Item data parsed from picaxml
+#' @param item Item data parsed from PicaPlus-XML
 #' @export
 zdb_maintitle <- function(item) {
     if (!is.null(tag__pp(item, "021A"))) {
@@ -75,7 +83,7 @@ zdb_maintitle <- function(item) {
 
 #' Erscheinungsverlauf
 #'
-#' @param item Item data parsed from picaxml
+#' @param item Item data parsed from PicaPlus-XML
 #' @export
 zdb_pubhistory <- function(item) {
     tag__pp(item, "031@")
@@ -83,7 +91,7 @@ zdb_pubhistory <- function(item) {
 
 #' maschinell verarbeitbarer Erscheinungsverlauf
 #'
-#' @param item Item data parsed from picaxml
+#' @param item Item data parsed from PicaPlus-XML
 #' @export
 zdb_pubhistory_strict <- function(item) {
     # 
@@ -121,7 +129,7 @@ zdb_pubhistory_strict <- function(item) {
 
 #' Einträge mit angegebener bibliographischer Gattung (bg)
 #'
-#' @param items Item data parsed from picaxml
+#' @param item Item data parsed from PicaPlus-XML
 #' @param bg Bibliographic type of item to be filtered
 #' @export
 zdb_filter_bibtype <- function(items, bg) {

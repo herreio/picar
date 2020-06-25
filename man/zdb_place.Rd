@@ -7,7 +7,7 @@
 zdb_place(item)
 }
 \arguments{
-\item{item}{Item data parsed from picaxml}
+\item{item}{Item data parsed from PicaPlus-XML}
 }
 \description{
 Verlagsorte, Verlag, Verleger

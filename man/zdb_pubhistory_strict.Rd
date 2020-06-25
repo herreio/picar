@@ -7,7 +7,7 @@
 zdb_pubhistory_strict(item)
 }
 \arguments{
-\item{item}{Item data parsed from picaxml}
+\item{item}{Item data parsed from PicaPlus-XML}
 }
 \description{
 maschinell verarbeitbarer Erscheinungsverlauf
