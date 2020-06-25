@@ -18,7 +18,7 @@ gbv_idn <- function(item) {
 #'
 #' @param item Item data parsed from picaxml
 #' @export
-gbv_urn <- function(item) {
+gbv_url <- function(item) {
   tag_subf(item, "009P", "a")
 }
 
