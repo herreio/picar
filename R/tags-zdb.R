@@ -148,13 +148,13 @@ zdb_pubhistory_strict <- function(item) {
 #' @export
 zdb_contributor_name <- function(item) {
     if (!is.null(tag_subf__pp(item, "028C", "d")) & !is.null(tag_subf__pp(item, "028C", "a"))) {
-        return(c(tag_subf__pp(item, "028C", "d"), tag_subf__pp(item, "028C", "a")))
+        return(paste(tag_subf__pp(item, "028C", "d"), tag_subf__pp(item, "028C", "a")))
     }
     if (is.null(tag_subf__pp(item, "028C", "d")) & !is.null(tag_subf__pp(item, "028C", "a"))) {
         return(tag_subf__pp(item, "028C", "a"))
     }
-    if (!is.null(tag_subf_pp(item, "028C", "P"))) {
-        return(tag_subf_pp(item, "028C", "P")))
+    if (!is.null(tag_subf__pp(item, "028C", "P"))) {
+        return(tag_subf__pp(item, "028C", "P"))
     }
     return(NULL)
 }
