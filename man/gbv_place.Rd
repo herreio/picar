@@ -4,10 +4,14 @@
 \alias{gbv_place}
 \title{Veroeffentlichungsangabe / Erscheinungsort}
 \usage{
-gbv_place(item)
+gbv_place(item, preserve = FALSE, collapse = FALSE)
 }
 \arguments{
 \item{item}{Item data parsed from picaxml}
+
+\item{preserve}{Whether to preserve empty values}
+
+\item{collapse}{Whether to collapse multiple values}
 }
 \description{
 Veroeffentlichungsangabe / Erscheinungsort

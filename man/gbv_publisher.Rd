@@ -4,10 +4,14 @@
 \alias{gbv_publisher}
 \title{Veroeffentlichungsangabe / Verlagsname}
 \usage{
-gbv_publisher(item)
+gbv_publisher(item, preserve = FALSE, collapse = FALSE)
 }
 \arguments{
 \item{item}{Item data parsed from picaxml}
+
+\item{preserve}{Whether to preserve empty values}
+
+\item{collapse}{Whether to collapse multiple values}
 }
 \description{
 Veroeffentlichungsangabe / Verlagsname

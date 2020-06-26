@@ -33,17 +33,21 @@ gbv_maintitle <- function(item) {
 #' Veroeffentlichungsangabe / Erscheinungsort
 #'
 #' @param item Item data parsed from picaxml
+#' @param preserve Whether to preserve empty values
+#' @param collapse Whether to collapse multiple values
 #' @export
-gbv_place <- function(item) {
-  tag_subf(item, "033A", "p")
+gbv_place <- function(item, preserve=FALSE, collapse=FALSE) {
+  tag_subf(item, "033A", "p", preserve=preserve, collapse=collapse)
 }
 
 #' Veroeffentlichungsangabe / Verlagsname
 #'
 #' @param item Item data parsed from picaxml
+#' @param preserve Whether to preserve empty values
+#' @param collapse Whether to collapse multiple values
 #' @export
-gbv_publisher <- function(item) {
-  tag_subf(item, "033A", "n")
+gbv_publisher <- function(item, preserve=FALSE, collapse=FALSE) {
+  tag_subf(item, "033A", "n", preserve=preserve, collapse=collapse)
 }
 
 #' Erscheinungsdatum/Entstehungsdatum
