@@ -11,6 +11,9 @@ adr_printer <- function(item, collapse=FALSE) {
         }
         return(printer_name)
     }
+    if (is.null(tag_subf(item, "033J", "d")) & !is.null(tag_subf(item, "033J", "a"))) {
+        return(tag_subf(item, "033J", "a", collapse=collapse))
+    }
 }
 
 #' Normierter Verleger / Drucker GND (Alte Drucke)
