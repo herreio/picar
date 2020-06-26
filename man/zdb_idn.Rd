@@ -7,7 +7,7 @@
 zdb_idn(item)
 }
 \arguments{
-\item{item}{Item data parsed from PicaPlus-XML}
+\item{item}{Pica item retrieved from ZDB}
 }
 \description{
 Identifikationsnummer des Datensatzes (IDN)

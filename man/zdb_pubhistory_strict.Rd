@@ -2,13 +2,13 @@
 % Please edit documentation in R/tags-zdb.R
 \name{zdb_pubhistory_strict}
 \alias{zdb_pubhistory_strict}
-\title{maschinell verarbeitbarer Erscheinungsverlauf}
+\title{Erscheinungsverlauf (maschinell verarbeitbar)}
 \usage{
 zdb_pubhistory_strict(item)
 }
 \arguments{
-\item{item}{Item data parsed from PicaPlus-XML}
+\item{item}{Pica item retrieved from ZDB}
 }
 \description{
-maschinell verarbeitbarer Erscheinungsverlauf
+Erscheinungsverlauf (maschinell verarbeitbar)
 }

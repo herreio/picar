@@ -2,13 +2,17 @@
 % Please edit documentation in R/tags-zdb.R
 \name{zdb_publisher}
 \alias{zdb_publisher}
-\title{Verlagsorte, Verlag, Verleger}
+\title{Verlag, Verleger}
 \usage{
-zdb_publisher(item)
+zdb_publisher(item, preserve = FALSE, collapse = FALSE)
 }
 \arguments{
-\item{item}{Item data parsed from PicaPlus-XML}
+\item{item}{Pica item retrieved from ZDB}
+
+\item{preserve}{Whether to preserve empty values}
+
+\item{collapse}{Whether to collapse multiple values}
 }
 \description{
-Verlagsorte, Verlag, Verleger
+Verlag, Verleger
 }

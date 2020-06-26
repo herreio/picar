@@ -7,7 +7,7 @@
 zdb_maintitle(item)
 }
 \arguments{
-\item{item}{Item data parsed from PicaPlus-XML}
+\item{item}{Pica item retrieved from ZDB}
 }
 \description{
 Hauptsachtitel

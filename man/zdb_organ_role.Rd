@@ -4,10 +4,14 @@
 \alias{zdb_organ_role}
 \title{Körperschaft, Konferenz - 1. geistiger Schöpfer (Rolle)}
 \usage{
-zdb_organ_role(item)
+zdb_organ_role(item, preserve = FALSE, collapse = FALSE)
 }
 \arguments{
-\item{item}{Item data parsed from PicaPlus-XML}
+\item{item}{Pica item retrieved from ZDB}
+
+\item{preserve}{Whether to preserve empty values}
+
+\item{collapse}{Whether to collapse multiple values}
 }
 \description{
 Körperschaft, Konferenz - 1. geistiger Schöpfer (Rolle)

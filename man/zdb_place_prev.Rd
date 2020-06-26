@@ -4,10 +4,14 @@
 \alias{zdb_place_prev}
 \title{Frühere Verlagsorte und Verleger}
 \usage{
-zdb_place_prev(item)
+zdb_place_prev(item, preserve = FALSE, collapse = FALSE)
 }
 \arguments{
-\item{item}{Item data parsed from PicaPlus-XML}
+\item{item}{Pica item retrieved from ZDB}
+
+\item{preserve}{Whether to preserve empty values}
+
+\item{collapse}{Whether to collapse multiple values}
 }
 \description{
 Frühere Verlagsorte und Verleger

@@ -4,10 +4,10 @@
 \alias{zdb_person_name}
 \title{Person - Bevorzugter Name}
 \usage{
-zdb_person_name(item)
+zdb_person_name(item, collapse = FALSE)
 }
 \arguments{
-\item{item}{Item data parsed from PicaPlus-XML}
+\item{item}{Pica item retrieved from ZDB}
 }
 \description{
 Person - Bevorzugter Name

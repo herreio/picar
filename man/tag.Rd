@@ -7,7 +7,7 @@
 tag(item, id)
 }
 \arguments{
-\item{item}{Item data parsed as picaxml}
+\item{item}{Item data parsed as picaxml or ppxml}
 
 \item{id}{Identifier of tag to be extracted}
 }

@@ -4,14 +4,18 @@
 \alias{tag_subf}
 \title{Extract content of subf of tag indicated by id from given item}
 \usage{
-tag_subf(item, id, subf)
+tag_subf(item, id, subf, preserve = FALSE, collapse = FALSE)
 }
 \arguments{
-\item{item}{Item data parsed as picaxml}
+\item{item}{Item data parsed as picaxml or ppxml}
 
 \item{id}{Identifier of tag to be extracted}
 
 \item{subf}{Subfield identifier of tag to be extracted}
+
+\item{preserve}{Whether to preserve empty and duplicate values}
+
+\item{collapse}{Whether to collapse multiple values}
 }
 \description{
 Extract content of subf of tag indicated by id from given item

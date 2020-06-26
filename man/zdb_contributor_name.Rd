@@ -4,10 +4,12 @@
 \alias{zdb_contributor_name}
 \title{Person, Familie – Sonstige und Mitwirkende (Name)}
 \usage{
-zdb_contributor_name(item)
+zdb_contributor_name(item, collapse = FALSE)
 }
 \arguments{
-\item{item}{Item data parsed from PicaPlus-XML}
+\item{item}{Pica item retrieved from ZDB}
+
+\item{collapse}{Whether to collapse multiple values}
 }
 \description{
 Person, Familie – Sonstige und Mitwirkende (Name)

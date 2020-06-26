@@ -4,10 +4,14 @@
 \alias{zdb_organ_gnd}
 \title{Körperschaft, Konferenz - 1. geistiger Schöpfer (GND)}
 \usage{
-zdb_organ_gnd(item)
+zdb_organ_gnd(item, preserve = FALSE, collapse = FALSE)
 }
 \arguments{
-\item{item}{Item data parsed from PicaPlus-XML}
+\item{item}{Pica item retrieved from ZDB}
+
+\item{preserve}{Whether to preserve empty values}
+
+\item{collapse}{Whether to collapse multiple values}
 }
 \description{
 Körperschaft, Konferenz - 1. geistiger Schöpfer (GND)

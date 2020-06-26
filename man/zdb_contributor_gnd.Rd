@@ -4,10 +4,14 @@
 \alias{zdb_contributor_gnd}
 \title{Person, Familie – Sonstige und Mitwirkende (GND)}
 \usage{
-zdb_contributor_gnd(item)
+zdb_contributor_gnd(item, preserve = FALSE, collapse = FALSE)
 }
 \arguments{
-\item{item}{Item data parsed from PicaPlus-XML}
+\item{item}{Pica item retrieved from ZDB}
+
+\item{preserve}{Whether to preserve empty values}
+
+\item{collapse}{Whether to collapse multiple values}
 }
 \description{
 Person, Familie – Sonstige und Mitwirkende (GND)

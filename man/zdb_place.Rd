@@ -2,13 +2,17 @@
 % Please edit documentation in R/tags-zdb.R
 \name{zdb_place}
 \alias{zdb_place}
-\title{Verlagsorte, Verlag, Verleger}
+\title{Verlagsorte}
 \usage{
-zdb_place(item)
+zdb_place(item, preserve = FALSE, collapse = FALSE)
 }
 \arguments{
-\item{item}{Item data parsed from PicaPlus-XML}
+\item{item}{Pica item retrieved from ZDB}
+
+\item{preserve}{Whether to preserve empty values}
+
+\item{collapse}{Whether to collapse multiple values}
 }
 \description{
-Verlagsorte, Verlag, Verleger
+Verlagsorte
 }

@@ -7,9 +7,9 @@
 zdb_filter_bibtype(items, bg)
 }
 \arguments{
-\item{bg}{Bibliographic type of item to be filtered}
+\item{items}{Pica items retrieved from ZDB}
 
-\item{item}{Item data parsed from PicaPlus-XML}
+\item{bg}{Bibliographic type of item to be filtered}
 }
 \description{
 Einträge mit angegebener bibliographischer Gattung (bg)

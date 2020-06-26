@@ -4,10 +4,14 @@
 \alias{zdb_person_gnd}
 \title{Person - Bevorzugter Name (Rolle)}
 \usage{
-zdb_person_gnd(item)
+zdb_person_gnd(item, preserve = FALSE, collapse = FALSE)
 }
 \arguments{
-\item{item}{Item data parsed from PicaPlus-XML}
+\item{item}{Pica item retrieved from ZDB}
+
+\item{preserve}{Whether to preserve empty values}
+
+\item{collapse}{Whether to collapse multiple values}
 }
 \description{
 Person - Bevorzugter Name (Rolle)

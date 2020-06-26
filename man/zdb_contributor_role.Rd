@@ -4,10 +4,14 @@
 \alias{zdb_contributor_role}
 \title{Person, Familie – Sonstige und Mitwirkende (Rolle)}
 \usage{
-zdb_contributor_role(item)
+zdb_contributor_role(item, preserve = FALSE, collapse = FALSE)
 }
 \arguments{
-\item{item}{Item data parsed from PicaPlus-XML}
+\item{item}{Pica item retrieved from ZDB}
+
+\item{preserve}{Whether to preserve empty values}
+
+\item{collapse}{Whether to collapse multiple values}
 }
 \description{
 Person, Familie – Sonstige und Mitwirkende (Rolle)
