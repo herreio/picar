@@ -4,10 +4,14 @@
 \alias{adr_printer_gnd}
 \title{Normierter Verleger / Drucker GND (Alte Drucke)}
 \usage{
-adr_printer_gnd(item)
+adr_printer_gnd(item, preserve = FALSE, collapse = FALSE)
 }
 \arguments{
 \item{item}{Item data parsed from picaxml}
+
+\item{preserve}{Whether to preserve empty values}
+
+\item{collapse}{Whether to collapse multiple values}
 }
 \description{
 Normierter Verleger / Drucker GND (Alte Drucke)

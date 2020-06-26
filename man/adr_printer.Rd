@@ -4,10 +4,12 @@
 \alias{adr_printer}
 \title{Normierter Verleger / Drucker (Alte Drucke)}
 \usage{
-adr_printer(item)
+adr_printer(item, collapse = FALSE)
 }
 \arguments{
 \item{item}{Item data parsed from picaxml}
+
+\item{collapse}{Whether to collapse multiple values}
 }
 \description{
 Normierter Verleger / Drucker (Alte Drucke)
