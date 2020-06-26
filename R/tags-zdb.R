@@ -167,6 +167,7 @@ zdb_organ_gnd <- function(item, preserve=FALSE, collapse=FALSE) {
 #' Person - Bevorzugter Name
 #'
 #' @param item Pica item retrieved from ZDB
+#' @param collapse Whether to collapse multiple values
 #' @export
 zdb_person_name <- function(item, collapse=FALSE) {
   if (!is.null(tag_subf(item, "028A", "d")) & !is.null(tag_subf(item, "028A", "a"))) {

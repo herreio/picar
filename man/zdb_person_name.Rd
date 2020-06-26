@@ -8,6 +8,8 @@ zdb_person_name(item, collapse = FALSE)
 }
 \arguments{
 \item{item}{Pica item retrieved from ZDB}
+
+\item{collapse}{Whether to collapse multiple values}
 }
 \description{
 Person - Bevorzugter Name
