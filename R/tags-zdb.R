@@ -56,16 +56,20 @@ zdb_bibtype <- function(item) {
 #' Angaben zum Inhalt
 #'
 #' @param item Pica item retrieved from ZDB
+#' @param preserve Whether to preserve empty values
+#' @param collapse Whether to collapse multiple values
 #' @export
-zdb_contenttype <- function(item) {
-  tag_subf(item, "013D", "a")
+zdb_contenttype <- function(item, preserve=FALSE, collapse=FALSE) {
+  tag_subf(item, "013D", "a", preserve=preserve, collapse=collapse)
 }
 
 #' Angaben zum Inhalt (GND-Nummer)
 #'
 #' @param item Pica item retrieved from ZDB
+#' @param preserve Whether to preserve empty values
+#' @param collapse Whether to collapse multiple values
 #' @export
-zdb_contenttype_gnd <- function(item) {
+zdb_contenttype_gnd <- function(item, preserve=FALSE, collapse=FALSE) {
   tag_subf(item, "013D", "0")
 }
 
@@ -134,6 +138,13 @@ zdb_pubhistory_strict <- function(item) {
     return(NULL)
 }
 
+#' Körperschaft, Konferenz - 1. geistiger Schöpfer
+#'
+#' @param item Pica item retrieved from ZDB
+zdb_organ <- function(item) {
+    tag(item, "029A")
+}
+
 #' Körperschaft, Konferenz - 1. geistiger Schöpfer (Name)
 #'
 #' @param item Pica item retrieved from ZDB
@@ -167,6 +178,13 @@ zdb_organ_gnd <- function(item, preserve=FALSE, collapse=FALSE) {
 #' Person - Bevorzugter Name
 #'
 #' @param item Pica item retrieved from ZDB
+zdb_person <- function(item) {
+    tag(item, "028A")
+}
+
+#' Person - Bevorzugter Name (Name)
+#'
+#' @param item Pica item retrieved from ZDB
 #' @param collapse Whether to collapse multiple values
 #' @export
 zdb_person_name <- function(item, collapse=FALSE) {
@@ -196,7 +214,7 @@ zdb_person_role <- function(item, preserve=FALSE, collapse=FALSE) {
     tag_subf(item, "028A", "B", preserve=preserve, collapse=collapse)
 }
 
-#' Person - Bevorzugter Name (Rolle)
+#' Person - Bevorzugter Name (GND)
 #'
 #' @param item Pica item retrieved from ZDB
 #' @param preserve Whether to preserve empty values
@@ -206,6 +224,9 @@ zdb_person_gnd <- function(item, preserve=FALSE, collapse=FALSE) {
     tag_subf(item, "028A", "9", preserve=preserve, collapse=collapse)
 }
 
+#' Person, Familie – Sonstige und Mitwirkende
+#'
+#' @param item Pica item retrieved from ZDB
 zdb_contributor <- function(item) {
     tag(item, "028C")
 }

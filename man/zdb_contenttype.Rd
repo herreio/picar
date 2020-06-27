@@ -4,10 +4,14 @@
 \alias{zdb_contenttype}
 \title{Angaben zum Inhalt}
 \usage{
-zdb_contenttype(item)
+zdb_contenttype(item, preserve = FALSE, collapse = FALSE)
 }
 \arguments{
 \item{item}{Pica item retrieved from ZDB}
+
+\item{preserve}{Whether to preserve empty values}
+
+\item{collapse}{Whether to collapse multiple values}
 }
 \description{
 Angaben zum Inhalt

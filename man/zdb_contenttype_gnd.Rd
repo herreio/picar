@@ -4,10 +4,14 @@
 \alias{zdb_contenttype_gnd}
 \title{Angaben zum Inhalt (GND-Nummer)}
 \usage{
-zdb_contenttype_gnd(item)
+zdb_contenttype_gnd(item, preserve = FALSE, collapse = FALSE)
 }
 \arguments{
 \item{item}{Pica item retrieved from ZDB}
+
+\item{preserve}{Whether to preserve empty values}
+
+\item{collapse}{Whether to collapse multiple values}
 }
 \description{
 Angaben zum Inhalt (GND-Nummer)

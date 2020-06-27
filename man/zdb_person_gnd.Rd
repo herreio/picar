@@ -2,7 +2,7 @@
 % Please edit documentation in R/tags-zdb.R
 \name{zdb_person_gnd}
 \alias{zdb_person_gnd}
-\title{Person - Bevorzugter Name (Rolle)}
+\title{Person - Bevorzugter Name (GND)}
 \usage{
 zdb_person_gnd(item, preserve = FALSE, collapse = FALSE)
 }
@@ -14,5 +14,5 @@ zdb_person_gnd(item, preserve = FALSE, collapse = FALSE)
 \item{collapse}{Whether to collapse multiple values}
 }
 \description{
-Person - Bevorzugter Name (Rolle)
+Person - Bevorzugter Name (GND)
 }
