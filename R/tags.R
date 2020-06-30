@@ -36,7 +36,7 @@ tag_subf <- function(item, id, subf, preserve=FALSE, collapse=FALSE) {
           }
       }
       if(!preserve) {
-        result[sapply(result, function(x) x=="" )] <- NULL
+        result <- result[result!=""]
         if(length(result) < 1) {
           return(NULL)
         }
