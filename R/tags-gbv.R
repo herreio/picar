@@ -18,16 +18,16 @@ gbv_idn <- function(item) {
 #'
 #' @param item Item data parsed from picaxml
 #' @export
-gbv_url <- function(item) {
-  tag_subf(item, "009P", "a")
+gbv_url <- function(item, preserve=FALSE, collapse=FALSE) {
+  tag_subf(item, "009P", "a", preserve=preserve, collapse=collapse)
 }
 
 #' Haupttitel, Titelzusatz, Verantwortlichkeitsangabe
 #'
 #' @param item Item data parsed from picaxml
 #' @export
-gbv_maintitle <- function(item) {
-  gsub("@", "", tag_subf(item, "021A", "a"), fixed=TRUE)
+gbv_maintitle <- function(item, preserve=FALSE, collapse=FALSE) {
+  gsub("@", "", tag_subf(item, "021A", "a", preserve=preserve, collapse=collapse), fixed=TRUE)
 }
 
 #' Veroeffentlichungsangabe / Erscheinungsort
