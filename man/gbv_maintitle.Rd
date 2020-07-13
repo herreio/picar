@@ -4,7 +4,7 @@
 \alias{gbv_maintitle}
 \title{Haupttitel, Titelzusatz, Verantwortlichkeitsangabe}
 \usage{
-gbv_maintitle(item)
+gbv_maintitle(item, preserve = FALSE, collapse = FALSE)
 }
 \arguments{
 \item{item}{Item data parsed from picaxml}

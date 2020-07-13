@@ -4,7 +4,7 @@
 \alias{gbv_url}
 \title{Elektronische Adresse und ergaenzende Angaben zum Zugriff (URL)}
 \usage{
-gbv_url(item)
+gbv_url(item, preserve = FALSE, collapse = FALSE)
 }
 \arguments{
 \item{item}{Item data parsed from picaxml}
