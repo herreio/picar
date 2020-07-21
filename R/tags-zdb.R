@@ -53,6 +53,14 @@ zdb_bibtype <- function(item) {
   tag_subf(item, "002@", "0")
 }
 
+#' Miscellaneous Identifiers
+#'
+#' @param item Pica item retrieved from ZDB
+#' @export
+zdb_miscidx <- function(item, preserve=FALSE, collapse=FALSE) {
+  tag_subf(item, "006Y", "0", preserve=preserve, collapse=collapse)
+}
+
 #' Angaben zum Inhalt
 #'
 #' @param item Pica item retrieved from ZDB
@@ -70,7 +78,7 @@ zdb_contenttype <- function(item, preserve=FALSE, collapse=FALSE) {
 #' @param collapse Whether to collapse multiple values
 #' @export
 zdb_contenttype_gnd <- function(item, preserve=FALSE, collapse=FALSE) {
-  tag_subf(item, "013D", "0")
+  tag_subf(item, "013D", "0", preserve=FALSE, collapse=FALSE)
 }
 
 #' ZDB-Nummer
